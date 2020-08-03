@@ -1,9 +1,15 @@
 .form-project {
   max-width: 500px;
+  margin: auto;
 }
 
 .input-project {
   display: flex;
   flex-direction: column;
   margin: 1rem;
+}
+
+.btn-form {
+  background-color: #445B65;
+  color: white;
 }

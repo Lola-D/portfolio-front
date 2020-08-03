@@ -7,7 +7,10 @@ const Navbar = () => {
   return (
     <div className='navbar'>
       <h1>Mon portfolio</h1>
-      <Link to='/'>Accueil</Link>
+      <div>
+        <Link to='/projects/new' className='navbar-links'>Ajouter un projet</Link>
+        <Link to='/' className='navbar-links'>Accueil</Link>
+      </div>
     </div>
   )
 }

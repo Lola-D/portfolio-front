@@ -5,6 +5,8 @@ import Navbar from './Navbar'
 
 import axios from 'axios'
 
+import './Home.css'
+
 class Home extends Component {
 
   state = {
@@ -26,14 +28,16 @@ class Home extends Component {
     return (
       <div>
         <Navbar />
-        {
-          projects.map(project => (
-            <Card
-              key={project.id}
-              project={project}
-            />
-          ))
-        }
+        <div className='cards-container'>
+          {
+            projects.map(project => (
+              <Card
+                key={project.id}
+                project={project}
+              />
+            ))
+          }
+        </div>
         <Form />
       </div>
     )
