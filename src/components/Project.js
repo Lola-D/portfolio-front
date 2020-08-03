@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Navbar from './Navbar'
+import UpdateProject from './UpdateProject'
 
 import axios from 'axios'
 
@@ -42,6 +43,7 @@ class Project extends Component {
         >
           Lien vers le Site
         </a>
+        <UpdateProject project={project} />
       </div>
     )
   }
