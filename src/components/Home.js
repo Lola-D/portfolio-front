@@ -24,7 +24,6 @@ class Home extends Component {
     const { projects } = this.state
     return (
       <div>
-        <p>Hello</p>
         {
           projects.map(project => (
             <Card
