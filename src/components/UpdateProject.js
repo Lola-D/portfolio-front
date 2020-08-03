@@ -6,37 +6,32 @@ import './Form.css'
 
 class UpdateProject extends Component {
 
-  state = {
-    name: '',
-    description: '',
-    githubUrl: '',
-    projectUrl: '',
-    preview: ''
-  }
-
-  componentDidMount() {
-    const { name, description, github_url, project_url, preview } = this.props.project
-    this.setState({
-      name: name,
-      description: description,
-      githubUrl: github_url,
-      projectUrl: project_url,
-      preview: preview
-    })
+  constructor(props) {
+    super(props)
+    const { project } = this.props
+    this.state = {
+      name: project.name,
+      description: project.description,
+      githubUrl: project.github_url,
+      projectUrl: project.project_url,
+      preview: project.preview
+    }
   }
 
   handleChange = e => {
     this.setState({ [e.target.name]: e.target.value })
   }
 
-  handleSubmit = () => {
+  handleSubmit = e => {
+    e.preventDefault()
+    const { id } = this.props.project.id
     axios
-      .put(`${process.env.REACT_APP_SERVER_URL}/project`, this.state)
+      .put(`${process.env.REACT_APP_SERVER_URL}/project/${id}`, this.state)
       .then(res => console.log(res))
   }
 
   render() {
-    const { name, description, github_url, project_url } = this.props.project
+    const { name, description, github_url, project_url } = this.state
     return (
       <div className='form-project'>
         <h2>Modifier le projet</h2>
@@ -88,7 +83,6 @@ class UpdateProject extends Component {
               onChange={this.handleChange}
               name='preview'
               type='file'
-              // value={preview}
               accept='image/jpeg'
               required
             />
