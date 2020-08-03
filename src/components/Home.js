@@ -11,7 +11,7 @@ class Home extends Component {
 
   getProjects = () => {
     axios
-      .get(`${process.env.REACT_APP_SERVER_URL}/home`)
+      .get(`${process.env.REACT_APP_SERVER_URL}/project`)
       .then(res => console.log(res))
   }
 
