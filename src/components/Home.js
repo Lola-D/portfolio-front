@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Card from './Card'
 import Form from './Form'
+import Navbar from './Navbar'
 
 import axios from 'axios'
 
@@ -24,6 +25,7 @@ class Home extends Component {
     const { projects } = this.state
     return (
       <div>
+        <Navbar />
         {
           projects.map(project => (
             <Card

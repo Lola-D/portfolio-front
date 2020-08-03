@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Navbar from './Navbar'
 
 import axios from 'axios'
 
@@ -23,6 +24,7 @@ class Project extends Component {
     const { project } = this.state
     return (
       <div>
+        <Navbar />
         <h1>{project.name}</h1>
         <img src='' alt='' />
         <p>{project.description}</p>
@@ -42,7 +44,6 @@ class Project extends Component {
         </a>
       </div>
     )
-
   }
 }
 
