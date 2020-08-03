@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import Form from './Form'
+
 import axios from 'axios'
 
 class Home extends Component {
@@ -17,6 +19,7 @@ class Home extends Component {
     return (
       <div>
         <p>Hello</p>
+        <Form />
       </div>
     )
   }

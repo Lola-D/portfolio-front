@@ -1,0 +1,9 @@
+.form-project {
+  max-width: 500px;
+}
+
+.input-project {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+}
