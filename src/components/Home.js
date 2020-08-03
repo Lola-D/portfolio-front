@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import Card from './Card'
-import Form from './Form'
 import Navbar from './Navbar'
 
 import axios from 'axios'
@@ -38,7 +37,6 @@ class Home extends Component {
             ))
           }
         </div>
-        <Form />
       </div>
     )
   }
