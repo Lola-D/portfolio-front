@@ -31,7 +31,7 @@ class UpdateProject extends Component {
   }
 
   render() {
-    const { name, description, github_url, project_url } = this.state
+    const { name, description, github_url, project_url } = this.props.project
     return (
       <div className='form-project'>
         <h2>Modifier le projet</h2>
