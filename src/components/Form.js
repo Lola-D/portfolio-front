@@ -19,8 +19,8 @@ class Form extends Component {
 
   handleSubmit = () => {
     axios
-      .post()
-      .then()
+      .post(`${process.env.REACT_APP_SERVER_URL}/project`, this.state)
+      .then(res => console.log(res))
   }
 
   render() {
@@ -77,6 +77,7 @@ class Form extends Component {
               onChange={this.handleChange}
               name='preview'
               type='file'
+              accept='image/jpeg'
               required
             />
           </div>
