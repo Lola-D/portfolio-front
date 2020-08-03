@@ -6,7 +6,7 @@ const Card = ({ project }) => {
   return (
     <div className='card'>
       <h2 className='card-title'>{project.name}</h2>
-      <img className='card-image' src='./julian-wild.png' />
+      <img className='card-image' src='../previews/julian-wild.png' />
       <p className='card-text'>{project.description}</p>
       <a
         href={project.github_url}
